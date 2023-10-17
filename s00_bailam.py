@@ -49,6 +49,23 @@ greeting('2100')             | Good evening!          | 14
 #endregion debai
 
 #region bailam
+
 def greeting(hour_str):
-  return 'todo'
+  if 'am' in hour_str or 'AM' in hour_str:
+    return 'Good morning!'
+  if 'pm' in hour_str  and '1' not in hour_str:
+    return 'Good evening!'
+  if 'PM' in hour_str  and '1' not in hour_str:
+    return 'Good evening!'
+  if hour_str<'12' or 'am' in hour_str or 'AM' in hour_str:
+    return 'Good morning!'
+  if hour_str>'12' and 'pm' in hour_str and '1' not in hour_str:
+    return 'Good evening!'
+  if hour_str>'12' and 'PM' in hour_str and '1' not in hour_str:
+    return 'Good evening!'
+  elif '1' in hour_str and 'pm' in hour_str or 'PM' in hour_str:
+    return 'Good afternoon!'
+  if hour_str>'12':
+    return 'Good evening!'
+  
 #endregion bailam
